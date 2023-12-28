@@ -23,7 +23,7 @@ class HomeController extends GetxController {
       return [];
     }
 
-    Uri url = Uri.parse("https://api.quran.gading.dev/surah");
+    Uri url = Uri.parse("http://185.166.27.110:8000/api/surah/");
     var res = await http.get(url);
 
     List? data = (json.decode(res.body) as Map<String, dynamic>)["data"];

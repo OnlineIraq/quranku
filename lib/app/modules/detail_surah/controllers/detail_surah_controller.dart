@@ -66,7 +66,7 @@ class DetailSurahController extends GetxController {
   }
 
   Future<SurahDetail> getDetailSurah(String id) async {
-    Uri url = Uri.parse("https://api.quran.gading.dev/surah/$id");
+    Uri url = Uri.parse("http://185.166.27.110:8000/api/surah/$id/");
     var res = await http.get(url);
 
     Map<String, dynamic> data =

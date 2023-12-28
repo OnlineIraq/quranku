@@ -18,8 +18,8 @@ flutter run
 ## 🔗 API Information
 
 API Used: 
-- https://api.quran.gading.dev/
-- https://doa-doa-api-ahmadramadhan.fly.dev/api
+- http://185.166.27.110:8000/
+- http://185.166.27.110:8000/api/
     
 ## Screenshots
 
