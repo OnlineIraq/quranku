@@ -24,7 +24,7 @@ class Doa {
     });
 
     factory Doa.fromJson(Map<String, dynamic>? json) => Doa(
-        id: json?["id"],
+        id: json?["id"].toString(),
         doa: json?["doa"],
         ayat: json?["ayat"],
         latin: json?["latin"],

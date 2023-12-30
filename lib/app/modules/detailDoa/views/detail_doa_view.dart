@@ -21,7 +21,7 @@ class DetailDoaView extends GetView<DetailDoaController> {
         elevation: 0,
         title: Row(children: [
           Text(
-            'Qur\'anKu',
+            'قورئان بە کوردی',
             style: TextStyle(
                 fontSize: 20.sp,
                 fontWeight: FontWeight.bold,
@@ -33,73 +33,76 @@ class DetailDoaView extends GetView<DetailDoaController> {
       body: SingleChildScrollView(
         child: SafeArea(
           child: Center(
-            child: Column(
-              children: [
-                SizedBox(height: 10.h),
-                Text(
-                  '${doa.doa}',
-                  style: TextStyle(
-                      fontSize: 24.sp,
-                      fontWeight: FontWeight.bold,
-                      color: subBackgroundColor,
-                      fontFamily: 'Poppins'),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(
-                  height: 20.h,
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  width: 200.w,
-                  height: 200.h,
-                  child: Lottie.asset(
-                    'lib/assets/pray.json',
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                children: [
+                  SizedBox(height: 10.h),
+                  Text(
+                    '${doa.doa}',
+                    style: TextStyle(
+                        fontSize: 24.sp,
+                        fontWeight: FontWeight.bold,
+                        color: subBackgroundColor,
+                        fontFamily: 'Poppins'),
+                    textAlign: TextAlign.center,
                   ),
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(15),
-                    color: HexColor("fffffff"),
+                  SizedBox(
+                    height: 20.h,
                   ),
-                ),
-                SizedBox(
-                  height: 20.h,
-                ),
-                Text(
-                  '${doa.ayat}',
-                  style: TextStyle(
-                      fontSize: 20.sp,
-                      fontWeight: FontWeight.w500,
-                      color: HexColor("ffffff"),
-                      fontFamily: 'Poppins'),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(
-                  height: 20.h,
-                ),
-                Text(
-                  '${doa.latin}',
-                  style: TextStyle(
-                      fontSize: 15.sp,
-                      fontWeight: FontWeight.w500,
-                      color: HexColor("ffffff"),
-                      fontFamily: 'Poppins'),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(
-                  height: 20.h,
-                ),
-                Text(
-                  '${doa.artinya}',
-                  style: TextStyle(
-                      fontSize: 15.sp,
-                      fontWeight: FontWeight.w500,
-                      color: HexColor("ffffff"),
-                      fontFamily: 'Poppins'),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(
-                  height: 20.h,
-                ),
-              ],
+                  Container(
+                    alignment: Alignment.center,
+                    width: 200.w,
+                    height: 200.h,
+                    child: Lottie.asset(
+                      'lib/assets/pray.json',
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: HexColor("fffffff"),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  Text(
+                    '${doa.ayat}',
+                    style: TextStyle(
+                        fontSize: 20.sp,
+                        fontWeight: FontWeight.w500,
+                        color: HexColor("ffffff"),
+                        fontFamily: 'Poppins'),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  Text(
+                    '${doa.latin}',
+                    style: TextStyle(
+                        fontSize: 15.sp,
+                        fontWeight: FontWeight.w500,
+                        color: HexColor("ffffff"),
+                        fontFamily: 'Poppins'),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  Text(
+                    '${doa.artinya}',
+                    style: TextStyle(
+                        fontSize: 15.sp,
+                        fontWeight: FontWeight.w500,
+                        color: HexColor("ffffff"),
+                        fontFamily: 'Poppins'),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                ],
+              ),
             ),
           ),
         ),

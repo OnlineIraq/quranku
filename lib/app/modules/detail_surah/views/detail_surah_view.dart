@@ -73,22 +73,22 @@ class DetailSurahView extends GetView<DetailSurahController> {
                           color: Colors.black,
                           fontFamily: 'Poppins'),
                     ),
-                    SizedBox(
-                      height: 5.h,
-                    ),
-                    Text(
-                      '( ${surah.name?.translation?.id} ) ',
-                      style: TextStyle(
-                          fontSize: 19.sp,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black87,
-                          fontFamily: 'Poppins'),
-                    ),
+                    // SizedBox(
+                    //   height: 5.h,
+                    // ),
+                    // Text(
+                    //   '( ${surah.name?.translation?.id} ) ',
+                    //   style: TextStyle(
+                    //       fontSize: 19.sp,
+                    //       fontWeight: FontWeight.bold,
+                    //       color: Colors.black87,
+                    //       fontFamily: 'Poppins'),
+                    // ),
                     SizedBox(
                       height: 10.h,
                     ),
                     Text(
-                      '${surah.numberOfVerses} ئایەت | ${surah.revelation?.id}',
+                      '${surah.numberOfVerses} ئایەت | ${surah.revelation?.arab}',
                       style: TextStyle(
                           fontSize: 15.sp,
                           color: Colors.black,
@@ -108,7 +108,6 @@ class DetailSurahView extends GetView<DetailSurahController> {
                 SizedBox(
                     height: 480.h,
                     child: ListView.builder(
-                      
                         shrinkWrap: true,
                         controller: controller.scrollController,
                         itemCount: snapshot.data?.verses.length ?? 0,
@@ -280,23 +279,23 @@ class DetailSurahView extends GetView<DetailSurahController> {
                                         fontFamily: 'Poppins'),
                                   ),
                                 ),
-                                SizedBox(
-                                  height: 5.h,
-                                ),
-                                Container(
-                                  padding:
-                                      const EdgeInsets.only(right: 15, left: 15)
-                                          .r,
-                                  child: Text(
-                                    '${ayat?.text?.transliteration?.en}',
-                                    textAlign: TextAlign.start,
-                                    style: TextStyle(
-                                        fontSize: 18.sp,
-                                        fontStyle: FontStyle.italic,
-                                        color: HexColor("004B40"),
-                                        fontFamily: 'Poppins'),
-                                  ),
-                                ),
+                                // SizedBox(
+                                //   height: 5.h,
+                                // ),
+                                // Container(
+                                //   padding:
+                                //       const EdgeInsets.only(right: 15, left: 15)
+                                //           .r,
+                                //   child: Text(
+                                //     '${ayat?.text?.transliteration?.en}',
+                                //     textAlign: TextAlign.start,
+                                //     style: TextStyle(
+                                //         fontSize: 18.sp,
+                                //         fontStyle: FontStyle.italic,
+                                //         color: HexColor("004B40"),
+                                //         fontFamily: 'Poppins'),
+                                //   ),
+                                // ),
                                 SizedBox(
                                   height: 20.h,
                                 ),

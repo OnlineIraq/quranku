@@ -14,10 +14,10 @@ class DoaController extends GetxController {
       print("Tidak ada koneksi internet");
       return [];
     }
-    Uri url = Uri.parse("https://doa-doa-api-ahmadramadhan.fly.dev/api");
+    Uri url = Uri.parse("http://185.166.27.110:8000/api/daily-duas/");
     var res = await http.get(url);
 
-    List<dynamic> responseData = json.decode(res.body);
+    List<dynamic> responseData = json.decode(res.body)['data'];
     if (responseData == null || responseData.isEmpty) {
       return [];
     } else {
