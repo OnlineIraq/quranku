@@ -29,8 +29,8 @@ class DoaView extends GetView<DoaController> {
                     borderRadius: BorderRadius.circular(20.r),
                     gradient: LinearGradient(
                       colors: [
-                        HexColor("87d1a4"),
                         HexColor("006754"),
+                        HexColor("87d1a4"),
                       ],
                     ),
                   ),
@@ -48,7 +48,7 @@ class DoaView extends GetView<DoaController> {
                           children: [
                             Positioned(
                               bottom: -60,
-                              right: -50,
+                              left: -50,
                               child: Opacity(
                                 opacity: 0.7,
                                 child: SizedBox(
@@ -65,7 +65,7 @@ class DoaView extends GetView<DoaController> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Terkadang,",
+                                  "هەندێک جار,",
                                   style: TextStyle(
                                     color: HexColor("#004B40"),
                                     fontSize: 20.sp,
@@ -74,7 +74,7 @@ class DoaView extends GetView<DoaController> {
                                   ),
                                 ),
                                 Text(
-                                  "yang dibutuhkan hanyalah",
+                                  "تەنها شتێک کە پێویستە ئەوەیە",
                                   style: TextStyle(
                                     fontSize: 13.sp,
                                     color: HexColor("#004B40"),
@@ -82,7 +82,7 @@ class DoaView extends GetView<DoaController> {
                                   ),
                                 ),
                                 Text(
-                                  "satu doa untuk mengubah",
+                                  "یەک دوعا بۆ گۆڕانکاری",
                                   style: TextStyle(
                                     fontSize: 13.sp,
                                     color: HexColor("#004B40"),
@@ -90,7 +90,7 @@ class DoaView extends GetView<DoaController> {
                                   ),
                                 ),
                                 Text(
-                                  "segalanya.",
+                                  "هەموو شتێک.",
                                   style: TextStyle(
                                     fontSize: 13.sp,
                                     color: HexColor("#004B40"),
@@ -110,7 +110,7 @@ class DoaView extends GetView<DoaController> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(width: 20.w),
-                  Text('Daftar Doa',
+                  Text('لیستی دوعا',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                           fontFamily: 'Poppins',
@@ -139,7 +139,7 @@ class DoaView extends GetView<DoaController> {
                     if (snapshot.data!.isEmpty) {
                       return Center(
                         child: Text(
-                          "Tidak ada koneksi internet",
+                          "هێڵی ئینتەرنێت نییە",
                           style: TextStyle(
                               color: const Color(0xFF121931),
                               fontSize: 15.sp,

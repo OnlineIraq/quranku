@@ -25,11 +25,11 @@ class LastReadView extends StatelessWidget {
           child: Column(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: 20.w),
+                padding: EdgeInsets.only(right: 20.w),
                 child: Align(
-                  alignment: Alignment.centerLeft,
+                  alignment: Alignment.centerRight,
                   child: Text(
-                    'Daftar Bookmark',
+                    'لیستی نیشانەکان',
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       fontSize: 20.sp,
@@ -44,7 +44,7 @@ class LastReadView extends StatelessWidget {
                   () => controller.getFilteredBookmarks().isEmpty
                       ? const Center(
                           child: Text(
-                            "Tidak ada bookmark",
+                            "هیچ نیشانەیەک نییە",
                             style: TextStyle(
                               color: Color(0xFF121931),
                               fontSize: 15,
@@ -107,19 +107,19 @@ class LastReadView extends StatelessWidget {
                               ),
                               trailing: IconButton(
                                 onPressed: () => Get.defaultDialog(
-                                    title: "Delete Bookmark",
+                                    title: "سڕینەوەی نیشانەکە",
                                     middleText:
-                                        "Apakah kamu yakin ingin menghapus Bookmark ini ?",
+                                        "ئایا دڵنیای کە دەتەوێت ئەم نیشانەیە بسڕیتەوە؟",
                                     actions: [
                                       OutlinedButton(
                                           onPressed: () => Get.back(),
-                                          child: Text("Cancel")),
+                                          child: Text("نەخێر")),
                                       ElevatedButton(
                                         onPressed: () {
                                           controller
                                               .deleteBookmark(bookmark.id ?? 0);
                                         },
-                                        child: Text("Delete"),
+                                        child: Text("سڕینەوە"),
                                         style: ElevatedButton.styleFrom(
                                           primary: Colors
                                               .red, // Mengatur warna latar belakang tombol

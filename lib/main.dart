@@ -18,6 +18,7 @@ void main() async {
         title: "Application",
         initialRoute: AppPages.INITIAL,
         getPages: AppPages.routes,
+        locale: Locale('ar', 'IQ'),
       );
     },
   ));

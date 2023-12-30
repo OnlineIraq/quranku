@@ -34,7 +34,7 @@ class DetailSurahController extends GetxController {
             "last_read"
           ],
           where:
-              "surah = '${surah.name!.transliteration!.id!.replaceAll("'", "*")}'and number_surah=${surah.number!} and ayat = ${ayat.number!.inSurah} and via = 'surah' and index_ayat = $index_ayat and last_read = 0");
+              "surah = '${surah.name!.short!.replaceAll("'", "*")}'and number_surah=${surah.number!} and ayat = ${ayat.number!.inSurah} and via = 'surah' and index_ayat = $index_ayat and last_read = 0");
       if (checkData.length != 0) {
         flagExist = true;
       }
@@ -42,7 +42,7 @@ class DetailSurahController extends GetxController {
 
     if (flagExist != true) {
       await db.insert("bookmark", {
-        "surah": "${surah.name!.transliteration!.id!.replaceAll("'", "*")}",
+        "surah": "${surah.name!.short!.replaceAll("'", "*")}",
         "number_surah": surah.number!,
         "ayat": ayat.number!.inSurah,
         "via": "surah",
@@ -51,12 +51,12 @@ class DetailSurahController extends GetxController {
       });
 
       Get.back();
-      Get.snackbar("Berhasil", "Berhasil menambahkan bookmark",
+      Get.snackbar("سەرکەوتن", "بە سەرکەوتوویی زیادکردنی نیشانە",
           colorText: HexColor("#FFFFFF"),
          backgroundColor: appbar);
     } else {
       Get.back();
-      Get.snackbar("Terjadi Kesalahan", "Bookmark Telah tersedia",
+      Get.snackbar("سەرکەوتن", "ئاماژەدان بەردەستە",
           colorText: HexColor("#FFFFFF"),
          backgroundColor: appbar);
     }

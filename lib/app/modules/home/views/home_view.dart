@@ -34,8 +34,8 @@ class HomeView extends GetView<HomeController> {
                             borderRadius: BorderRadius.circular(20.r),
                             gradient: LinearGradient(
                               colors: [
-                                HexColor("87d1a4"),
                                 HexColor("006754"),
+                                HexColor("87d1a4"),
                               ],
                             ),
                           ),
@@ -70,7 +70,7 @@ class HomeView extends GetView<HomeController> {
                               onTap: () {
                                 if (lastRead != null) {
                                   print(lastRead);
-                                     Get.toNamed(Routes.DETAIL_SURAH, arguments: {
+                                  Get.toNamed(Routes.DETAIL_SURAH, arguments: {
                                     "name": lastRead["surah"]
                                         .toString()
                                         .replaceAll("*", "'"),
@@ -87,7 +87,7 @@ class HomeView extends GetView<HomeController> {
                                   children: [
                                     Positioned(
                                       bottom: -60,
-                                      right: -50,
+                                      left: -50,
                                       child: Opacity(
                                         opacity: 0.7,
                                         child: SizedBox(
@@ -114,7 +114,7 @@ class HomeView extends GetView<HomeController> {
                                               width: 10.w,
                                             ),
                                             Text(
-                                              "Terakhir dibaca",
+                                              "دوا خوێندنەوە",
                                               style: TextStyle(
                                                 fontSize: 18.sp,
                                                 color: HexColor("#004B40"),
@@ -137,8 +137,8 @@ class HomeView extends GetView<HomeController> {
                                           ),
                                         Text(
                                           lastRead == null
-                                              ? "Belum ada data"
-                                              : "Ayat ${lastRead['ayat']}",
+                                              ? "هێشتا هیچ داتایەک نییە"
+                                              : "ئایەت ${lastRead['ayat']}",
                                           style: TextStyle(
                                             fontSize: 18.sp,
                                             color: HexColor("#004B40"),
@@ -160,7 +160,7 @@ class HomeView extends GetView<HomeController> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(width: 20.w),
-                  Text('Daftar Surah',
+                  Text('لیستی سورەتەکان',
                       textAlign: TextAlign.left,
                       style: TextStyle(
                           fontFamily: 'Poppins',
@@ -189,7 +189,7 @@ class HomeView extends GetView<HomeController> {
                     if (snapshot.data!.isEmpty) {
                       return Center(
                         child: Text(
-                          "Tidak ada koneksi internet",
+                          "هێڵی ئینتەرنێت نییە",
                           style: TextStyle(
                               color: const Color(0xFF121931),
                               fontSize: 15.sp,
@@ -206,7 +206,7 @@ class HomeView extends GetView<HomeController> {
                             return ListTile(
                               onTap: () {
                                 Get.toNamed(Routes.DETAIL_SURAH, arguments: {
-                                  "name": surah.name!.transliteration!.id,
+                                  "name": surah.name!.short,
                                   "number": surah.number,
                                 });
                               },
@@ -230,20 +230,20 @@ class HomeView extends GetView<HomeController> {
                                 ),
                               ),
                               title: Text(
-                                "${surah.name!.transliteration?.id}",
+                                "${surah.name!.short}",
                                 style: TextStyle(
                                     color: const Color(0xFF121931),
                                     fontSize: 15.sp,
                                     fontFamily: 'Poppins'),
                               ),
                               subtitle: Text(
-                                "${surah.numberOfVerses ?? 0} | ${surah.revelation?.id ?? ""}",
+                                "${surah.numberOfVerses ?? 0} | ${surah.revelation?.arab ?? ""}",
                                 style: TextStyle(
                                     color: HexColor("858585"),
                                     fontFamily: 'Poppins'),
                               ),
                               trailing: Text(
-                                surah.name!.short ?? "",
+                                surah.name!.long ?? "",
                                 style: TextStyle(
                                     color: HexColor("076C58"),
                                     fontWeight: FontWeight.bold,

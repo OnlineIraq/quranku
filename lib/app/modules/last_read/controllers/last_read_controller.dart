@@ -30,7 +30,7 @@ class LastReadController extends GetxController {
     await db.delete("bookmark", where: "id = ?", whereArgs: [id]);
     await initBookmark();
     Get.back();
-    Get.snackbar("Berhasil", "Berhasil menghapus bookmark",
+    Get.snackbar("سەرکەوتوو", "بە سەرکەوتوویی نیشانەکە سڕاوەتەوە",
         colorText: HexColor("#FFFFFF"),
          backgroundColor: appbar);
   }

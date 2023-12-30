@@ -9,7 +9,7 @@ PreferredSizeWidget appBar = AppBar(
   elevation: 0,
   title: Row(children: [
     Text(
-      'Qur\'anKu',
+      'قورئان بەکوردی',
       style: TextStyle(
           fontSize: 20.sp,
           fontWeight: FontWeight.bold,

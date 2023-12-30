@@ -31,7 +31,7 @@ class SplashView extends GetView<SplashController> {
             ),
             SizedBox(height: 5.h),
             Text(
-              'Qur\'anKu',
+              'قورئان بەکوردی',
               style: TextStyle(
                 fontSize: 40.sp,
                 fontWeight: FontWeight.bold,
@@ -43,7 +43,7 @@ class SplashView extends GetView<SplashController> {
             Column(
               children: [
                 Text(
-                  'Bacalah meskipun hanya',
+                  'بیخوێنەرەوە تەنانەت ئەگەر تەنها',
                   style: TextStyle(
                     fontSize: 24.sp,
                     color: Colors.white,
@@ -53,7 +53,7 @@ class SplashView extends GetView<SplashController> {
                 ),
                 const SizedBox(height: 10),
                 Text(
-                  'satu ayat',
+                  'یەک ئایەتیش بێت',
                   style: TextStyle(
                     fontSize: 24.sp,
                     color: Colors.white,

@@ -23,7 +23,7 @@ class DetailSurahView extends GetView<DetailSurahController> {
         elevation: 0,
         title: Row(children: [
           Text(
-            'Surah ${Get.arguments["name"]}',
+            'سورەتی ${Get.arguments["name"]}',
             style: TextStyle(
                 fontSize: 20.sp,
                 fontWeight: FontWeight.w500,
@@ -66,7 +66,7 @@ class DetailSurahView extends GetView<DetailSurahController> {
                   elevation: 0,
                   child: Column(children: [
                     Text(
-                      '${surah.name?.transliteration?.id}',
+                      '${surah.name?.short}',
                       style: TextStyle(
                           fontSize: 20.sp,
                           fontWeight: FontWeight.bold,
@@ -88,7 +88,7 @@ class DetailSurahView extends GetView<DetailSurahController> {
                       height: 10.h,
                     ),
                     Text(
-                      '${surah.numberOfVerses} Ayat | ${surah.revelation?.id}',
+                      '${surah.numberOfVerses} ئایەت | ${surah.revelation?.id}',
                       style: TextStyle(
                           fontSize: 15.sp,
                           color: Colors.black,
@@ -123,7 +123,7 @@ class DetailSurahView extends GetView<DetailSurahController> {
                             index: index,
                             controller: controller.scrollController,
                             child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Card(
                                     elevation: 0,
@@ -165,9 +165,9 @@ class DetailSurahView extends GetView<DetailSurahController> {
                                                             print(Get
                                                                 .arguments);
                                                             Get.defaultDialog(
-                                                              title: "BOOKMARK",
+                                                              title: "نیشانەکردن",
                                                               middleText:
-                                                                  "Pilih jenis bookmark",
+                                                                  "جۆری نیشانە هەڵبژێرە",
                                                               actions: [
                                                                 ElevatedButton(
                                                                   onPressed:
@@ -182,7 +182,9 @@ class DetailSurahView extends GetView<DetailSurahController> {
                                                                         .update();
                                                                   },
                                                                   child: Text(
-                                                                      "Last Read"),
+                                                                      "کۆتا خوێندەوە",
+                                                                      style: TextStyle(color: Colors.white),
+                                                                      ),
                                                                   style: ElevatedButton
                                                                       .styleFrom(
                                                                     primary:
@@ -200,7 +202,9 @@ class DetailSurahView extends GetView<DetailSurahController> {
                                                                         index);
                                                                   },
                                                                   child: Text(
-                                                                      "Bookmark"),
+                                                                      "نیشانەکردن", 
+                                                                      style: TextStyle(color: Colors.white),
+                                                                      ),
                                                                   style: ElevatedButton
                                                                       .styleFrom(
                                                                     primary:
@@ -269,7 +273,7 @@ class DetailSurahView extends GetView<DetailSurahController> {
                                           .r,
                                   child: Text(
                                     '${ayat?.text?.arab}',
-                                    textAlign: TextAlign.end,
+                                    textAlign: TextAlign.start,
                                     style: TextStyle(
                                         fontSize: 25.sp,
                                         color: HexColor("004B40"),
@@ -285,7 +289,7 @@ class DetailSurahView extends GetView<DetailSurahController> {
                                           .r,
                                   child: Text(
                                     '${ayat?.text?.transliteration?.en}',
-                                    textAlign: TextAlign.end,
+                                    textAlign: TextAlign.start,
                                     style: TextStyle(
                                         fontSize: 18.sp,
                                         fontStyle: FontStyle.italic,
@@ -302,7 +306,7 @@ class DetailSurahView extends GetView<DetailSurahController> {
                                       .r,
                                   child: Text(
                                     '${ayat?.translation?.id}',
-                                    textAlign: TextAlign.justify,
+                                    textAlign: TextAlign.start,
                                     style: TextStyle(
                                         fontSize: 18.sp,
                                         color: HexColor("076C58"),
@@ -323,7 +327,7 @@ class DetailSurahView extends GetView<DetailSurahController> {
                                         margin: EdgeInsets.symmetric(
                                                 horizontal: 5.0)
                                             .r,
-                                        alignment: Alignment.centerLeft,
+                                        alignment: Alignment.centerRight,
                                         padding: EdgeInsets.all(12.0).r,
                                         decoration: BoxDecoration(
                                           color: appbar,
@@ -332,8 +336,8 @@ class DetailSurahView extends GetView<DetailSurahController> {
                                         ),
                                         child: Obx(() => Text(
                                               controller.isVisible(index)
-                                                  ? 'Tekan untuk Tutup Tafsir'
-                                                  : 'Tekan untuk Tampilkan Tafsir',
+                                                  ? 'دەستدابگرە بۆ داخستنی پەرەی تەفسیر'
+                                                  : 'دەستدابگرە بۆ کردنەوەی پەرەی تەفسیر',
                                               style: TextStyle(
                                                   color: Colors.white),
                                             )),
@@ -361,7 +365,7 @@ class DetailSurahView extends GetView<DetailSurahController> {
                                                 .r,
                                             child: Text(
                                               '${ayat?.tafsir?.id.long}',
-                                              textAlign: TextAlign.justify,
+                                              textAlign: TextAlign.start,
                                               style: TextStyle(
                                                   fontSize: 14.sp,
                                                   color: HexColor("076C58"),
