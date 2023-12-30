@@ -21,7 +21,7 @@ class DetailDoaView extends GetView<DetailDoaController> {
         elevation: 0,
         title: Row(children: [
           Text(
-            'قورئان بە کوردی',
+            'قورئان بەکوردی',
             style: TextStyle(
                 fontSize: 20.sp,
                 fontWeight: FontWeight.bold,
